@@ -86,6 +86,9 @@ On when the oven is actively cooking (remaining time > 0).
 **`switch.tovala_[recipe_name]`**
 One switch for each custom recipe. Tap to start cooking that recipe.
 
+- **Recipe Switches**: One switch per custom recipe (momentary)
+- **Oven Power**: Turn off/cancel cooking (shows ON when oven is active) ⭐ NEW
+  
 ### Events
 
 **`tovala_timer_finished`**
