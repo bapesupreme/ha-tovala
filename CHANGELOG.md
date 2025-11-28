@@ -5,6 +5,16 @@ All notable changes to the Tovala Smart Oven Home Assistant integration will be 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2024-11-28
+
+### Added
+- Oven Power switch to turn off/cancel cooking sessions
+- Automatic oven state detection (on when cooking/preheating/warming/ready)
+
+### Changed
+- Switch platform now always creates a power switch
+- API client includes new `cancel_cook()` method
+
 ## [2.0.0] - 2025-01-XX
 
 ### Added
