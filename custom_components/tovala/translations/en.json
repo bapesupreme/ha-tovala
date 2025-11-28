@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Tovala Smart Oven",
+        "description": "Enter your Tovala account credentials to connect your smart oven.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid email or password. Please check your Tovala account credentials.",
+      "cannot_connect": "Cannot connect to Tovala servers. Please check your internet connection and try again.",
+      "rate_limit": "Too many login attempts. Please wait 30-60 minutes before trying again.",
+      "unknown": "An unexpected error occurred. Please check the logs for details."
+    },
+    "abort": {
+      "already_configured": "This Tovala account is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "time_remaining": {
+        "name": "Time Remaining"
+      },
+      "last_cook": {
+        "name": "Last Cook"
+      }
+    },
+    "binary_sensor": {
+      "timer_running": {
+        "name": "Timer Running"
+      }
+    }
+  }
+}
