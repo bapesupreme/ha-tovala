@@ -1,0 +1,13 @@
+{
+  "domain": "tovala",
+  "name": "Tovala Smart Oven",
+  "codeowners": ["@bapesupreme"],
+  "config_flow": true,
+  "documentation": "https://github.com/bapesupreme/ha-tovala",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/bapesupreme/ha-tovala/issues",
+  "loggers": ["custom_components.tovala"],
+  "requirements": [],
+  "version": "1.0.0"
+}
