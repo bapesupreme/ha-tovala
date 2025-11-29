@@ -385,47 +385,9 @@ class TovalaClient:
         except Exception as e:
             _LOGGER.error("Failed to start cooking: %s", e, exc_info=True)
             raise TovalaApiError(f"Failed to start cooking: {str(e)}")
-async def start_cooking(self, oven_id: str, barcode: str) -> None:
-        """Start cooking with a specific barcode."""
-        if not oven_id:
-            raise TovalaApiError("oven_id is required")
-        if not barcode:
-            raise TovalaApiError("barcode is required")
 
-        if not self._user_id:
-            raise TovalaApiError("No user_id available - login first")
-
-        _LOGGER.info("Starting cooking: oven=%s, barcode=%s", oven_id, barcode)
-
-        try:
-            path = f"/v0/users/{self._user_id}/ovens/{oven_id}/cook/start"
-            await self._post_json(path, {"barcode": barcode})
-            _LOGGER.info("Successfully started cooking")
-        except Exception as e:
-            _LOGGER.error("Failed to start cooking: %s", e, exc_info=True)
-            raise TovalaApiError(f"Failed to start cooking: {str(e)}")
-async def start_cooking(self, oven_id: str, barcode: str) -> None:
-        """Start cooking with a specific barcode."""
-        if not oven_id:
-            raise TovalaApiError("oven_id is required")
-        if not barcode:
-            raise TovalaApiError("barcode is required")
-
-        if not self._user_id:
-            raise TovalaApiError("No user_id available - login first")
-
-        _LOGGER.info("Starting cooking: oven=%s, barcode=%s", oven_id, barcode)
-
-        try:
-            path = f"/v0/users/{self._user_id}/ovens/{oven_id}/cook/start"
-            await self._post_json(path, {"barcode": barcode})
-            _LOGGER.info("Successfully started cooking")
-        except Exception as e:
-            _LOGGER.error("Failed to start cooking: %s", e, exc_info=True)
-            raise TovalaApiError(f"Failed to start cooking: {str(e)}")
-
-async def cancel_cook(self, oven_id: str) -> None:
-       """Cancel current cooking session."""
+    async def cancel_cook(self, oven_id: str) -> None:
+        """Cancel current cooking session."""
         if not oven_id:
             raise TovalaApiError("oven_id is required")
 
